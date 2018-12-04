@@ -7,7 +7,7 @@ function testing(dispatch) {
     )
     .then(response => {
       console.log('axios response', response);
-      dispatch({type: 'ON_MOUNT', storiesList: response.data.articles,
+      dispatch({type: 'ON_INITIAL_LOAD', storiesList: response.data.articles,
       });
     });
 }

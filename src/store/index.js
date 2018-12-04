@@ -10,11 +10,14 @@ const reducer = (state = initialState, action) => {
     case 'ON_INPUT_CHANGE':
       return Object.assign({}, state, { inputText: action.text });
     case 'ON_INPUT_SUBMIT':
+    case 'ON_INITIAL_LOAD':
       return Object.assign({}, state, {
         storiesList: action.storiesList,
         inputText: '',
       });
+
     default:
+    console.log(state);
       return state;
   }
 };

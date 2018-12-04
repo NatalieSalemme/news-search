@@ -14,6 +14,9 @@ function matchMe(str) {
 }
 
 class StoriesList extends React.Component {
+  componentDidMount(dispatch) {
+    this.props.onInitialLoad();
+  }
   render() {
     return (
       <div>
@@ -74,6 +77,9 @@ const mapDispatchToProps = dispatch => {
       e.preventDefault();
       Api.getStories(dispatch, query);
     },
+    onInitialLoad: () => {
+      Api.testing(dispatch);
+    }
   };
 };
 
