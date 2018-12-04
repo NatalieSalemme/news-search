@@ -3,7 +3,16 @@ import { connect } from 'react-redux';
 import getStories from './Api';
 import { Card, Icon, Image } from 'semantic-ui-react';
 
-function StoriesList(props) {
+
+
+const StoriesList = (props) => {
+  function matchMe(str) {
+    let regEx = /\d{4}\-\d{2}\-\d{2}/;
+    let match = str.match(regEx)[0].split('-');
+    let results = [match[1],match[2], match[0]].join('/');
+    return results;
+  }
+  
   return (
     <div>
       <h1>StoriesList</h1>
@@ -12,18 +21,20 @@ function StoriesList(props) {
         <input
           value={props.inputText}
           onChange={props.onInputChange}/>
-
       </form>
       <ul>
-        {props.storiesList.map((story) => {
+        {props.storiesList.map((story, index) => {
           return (
-          <div key={story.title.toString()}>
-
-
-            <Card href={story.url} target="_blank">
+          <div key={index}>
+            <Card
+              href={story.url}
+              target="_blank">
               <Image src={story.urlToImage} />
               <Card.Content>
                 <Card.Header>{story.title}</Card.Header>
+                <Card.Meta>
+                  {matchMe(story.publishedAt)}
+                </Card.Meta>
                 <Card.Description>{story.description}</Card.Description>
               </Card.Content>
             </Card>
