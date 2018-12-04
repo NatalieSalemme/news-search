@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react'
-import { Input, Menu, Header, Grid } from 'semantic-ui-react'
+import { Input, Menu, Header, Grid } from 'semantic-ui-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faNewspaper} from '@fortawesome/free-solid-svg-icons';
 
 export default class MenuExampleSecondary extends Component {
   state = { activeItem: 'home' }
@@ -8,6 +10,7 @@ export default class MenuExampleSecondary extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
+    const newspaperIcon = <FontAwesomeIcon icon={faNewspaper} />
     console.log(this.state);
     const { activeItem } = this.state
     return (
@@ -24,10 +27,14 @@ export default class MenuExampleSecondary extends Component {
           active={activeItem === 'contact'}
           onClick={this.handleItemClick}
         />
-        <Header as='h1' color='blue'>First Header</Header>
+        <Menu.Header as='h1' color='blue' className='main-header'>
+            <span className="newspaper-icon">{newspaperIcon}</span>
+            News Search
+        </Menu.Header>
+
         <Menu.Menu position='right'>
           <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
+            <Input icon='search' size="large" placeholder='Search...' />
           </Menu.Item>
           <Menu.Item
             position='right'
