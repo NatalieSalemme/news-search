@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import getStories from './Api';
+import Menu from './Menu';
+
 import {
   Card,
   Icon,
@@ -19,6 +21,7 @@ const StoriesList = (props) => {
 
   return (
     <div>
+      <Menu />
       <h1>StoriesList</h1>
       <form
         onSubmit={(e) => props.onInputSubmit(e, props.inputText)}>
