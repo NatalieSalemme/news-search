@@ -1,20 +1,19 @@
 import { createStore } from 'redux'
 
 const initialState = {
-  stories: [],
+  storiesList: [],
   inputText: ''
 }
 
 const reducer = (state = initialState, action) => {
-  console.log(state, action);
   switch(action.type) {
     case 'ON_INPUT_CHANGE':
       return Object.assign({}, state, {inputText: action.text});
-    break;
+    case 'ON_INPUT_SUBMIT':
+      return Object.assign({}, state, {storiesList: action.storiesList, inputText: ''});
     default:
       return state;
   }
 }
 const store = createStore(reducer);
-
 export default store;
