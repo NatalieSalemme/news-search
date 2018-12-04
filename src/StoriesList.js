@@ -1,7 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import getStories from './Api';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import {
+  Card,
+  Icon,
+  Image,
+  Grid } from 'semantic-ui-react';
 
 
 
@@ -12,36 +16,44 @@ const StoriesList = (props) => {
     let results = [match[1],match[2], match[0]].join('/');
     return results;
   }
-  
+
   return (
     <div>
       <h1>StoriesList</h1>
       <form
         onSubmit={(e) => props.onInputSubmit(e, props.inputText)}>
         <input
+          className="search-input"
           value={props.inputText}
           onChange={props.onInputChange}/>
       </form>
-      <ul>
+      <Grid>
         {props.storiesList.map((story, index) => {
           return (
-          <div key={index}>
+          <div
+            style={{marginBottom: '1em'}}
+            key={index}>
             <Card
+
               href={story.url}
               target="_blank">
-              <Image src={story.urlToImage} />
-              <Card.Content>
+              <Image
+                className="story-thumbnail"
+                src={story.urlToImage} />
+              <Card.Content
+                className="card-content">
                 <Card.Header>{story.title}</Card.Header>
                 <Card.Meta>
                   {matchMe(story.publishedAt)}
                 </Card.Meta>
-                <Card.Description>{story.description}</Card.Description>
+                <Card.Description>{story.description.length > 150 ?
+                  story.description.split(' ').slice(0,20).join(' ') + '...' : story.description}</Card.Description>
               </Card.Content>
             </Card>
           </div>
           )
         })}
-      </ul>
+      </Grid>
     </div>
   );
 }
