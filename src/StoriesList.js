@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import getStories from './Api';
-
+import { Card, Icon, Image } from 'semantic-ui-react';
 
 function StoriesList(props) {
   return (
@@ -12,14 +12,22 @@ function StoriesList(props) {
         <input
           value={props.inputText}
           onChange={props.onInputChange}/>
+
       </form>
       <ul>
         {props.storiesList.map((story) => {
           return (
-            <li
-              key={story.id}>
-              {story.title}
-            </li>
+          <div key={story.title.toString()}>
+
+
+            <Card href={story.url} target="_blank">
+              <Image src={story.urlToImage} />
+              <Card.Content>
+                <Card.Header>{story.title}</Card.Header>
+                <Card.Description>{story.description}</Card.Description>
+              </Card.Content>
+            </Card>
+          </div>
           )
         })}
       </ul>
