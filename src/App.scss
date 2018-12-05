@@ -16,7 +16,9 @@ body {
   height: 13em;
 }
 .card-content {
-  height: 17em;
+  height: 19em;
+  position: relative;
+  bottom: 2.4em;
 }
 
 .main-header {
@@ -54,4 +56,8 @@ body {
 }
 .published {
   padding: 1em 0;
+}
+.main-page-button {
+  position: relative;
+  top: 16em;
 }

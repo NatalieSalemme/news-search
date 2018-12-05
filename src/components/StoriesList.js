@@ -22,7 +22,7 @@ function trimDescription(desc) {
 
 function trimTitle(title) {
   if(title.length > 40) {
-  return title.split(' ').slice(0,8).join(' ') + '...';
+  return title.split(' ').slice(0,9).join(' ') + '...';
   }
   return title;
 }
@@ -48,19 +48,20 @@ class StoriesList extends React.Component {
             return (
               <div className="card-container" key={index}>
                 <Card>
+
                   <Image className="story-thumbnail" src={story.urlToImage} />
                   <Card.Content className="card-content">
-                    <Card.Header>{trimTitle(story.title)}</Card.Header>
-                    <Card.Meta>{matchMe(story.publishedAt)}</Card.Meta>
                     <Button
+                      className="main-page-button"
                       onClick={(e) => this.props.onStorySelect(story)}
                       basic color='red'>
-
                       <Link to={{ pathname: `/storypage/${trimTitle(story.title).slice(0,33)}`}}>View Story</Link>
                     </Button>
+                    <Card.Header className="main-title">{trimTitle(story.title)}</Card.Header>
+                    <Card.Meta>{matchMe(story.publishedAt)}</Card.Meta>
+
                     <Card.Description>
-                      <p>{story.description}</p>
-                      <p>{story.content}</p>
+                      <p>{story.description.split(' ').slice(0,19).join(' ') }</p>
                     </Card.Description>
 
                   </Card.Content>

@@ -28,7 +28,7 @@ class StoryPage extends Component {
         <div className="published">Published: {matchMe(publishedAt)} </div>
         <div className="content-container">{description}{content}</div>
         <Button
-          basic color="teal"
+          color="teal"
           href={url}
           target="_blank"
           >See Full Story</Button>
