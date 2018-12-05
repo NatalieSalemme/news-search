@@ -12,26 +12,20 @@ function matchMe(str) {
   return results;
 }
 
-// function trimDescription(desc) {
-//
-//   if(desc.length) {
-//     if(desc.length > 150) {
-//       return desc.split(' ').slice(0,19).join(' ') + '...';
-//     } else {
-//       return desc;
-//     }
-//     return '';
-//   }
-//
-//
-// }
-//
-// function trimTitle(title) {
-//   if(title.length > 40) {
-//   return title.split(' ').slice(0,8).join(' ') + '...';
-//   }
-//   return title;
-// }
+function trimDescription(desc) {
+  console.log(this.props);
+  if(desc.length > 150) {
+    return desc.split(' ').slice(0,19).join(' ') + '...';
+  }
+    return desc;
+}
+
+function trimTitle(title) {
+  if(title.length > 40) {
+  return title.split(' ').slice(0,8).join(' ') + '...';
+  }
+  return title;
+}
 
 class StoriesList extends React.Component {
   componentDidMount(dispatch) {
@@ -53,19 +47,20 @@ class StoriesList extends React.Component {
           {this.props.storiesList.map((story, index) => {
             return (
               <div className="card-container" key={index}>
-                <Card href={story.url} target="_blank">
+                <Card>
                   <Image className="story-thumbnail" src={story.urlToImage} />
                   <Card.Content className="card-content">
-                    <Card.Header>{story.title}</Card.Header>
+                    <Card.Header>{trimTitle(story.title)}</Card.Header>
                     <Card.Meta>{matchMe(story.publishedAt)}</Card.Meta>
                     <Button
                       onClick={(e) => this.props.onStorySelect(story)}
                       basic color='red'>
 
-                      <Link to={{ pathname: `/storypage/${story.title.slice(0,33)}`}}>View Story</Link>
+                      <Link to={{ pathname: `/storypage/${trimTitle(story.title).slice(0,33)}`}}>View Story</Link>
                     </Button>
                     <Card.Description>
-                      {story.description}
+                      <p>{story.description}</p>
+                      <p>{story.content}</p>
                     </Card.Description>
 
                   </Card.Content>
