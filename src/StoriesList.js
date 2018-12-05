@@ -15,14 +15,14 @@ function matchMe(str) {
 
 function trimDescription(desc) {
   if(desc.length > 150) {
-    return desc.split(' ').slice(0,30).join(' ') + '...';
+    return desc.split(' ').slice(0,25).join(' ') + '...';
   }
   return desc;
 }
 
 function trimTitle(title) {
   if(title.length > 40) {
-  return title.split(' ').slice(0,10).join(' ') + '...';
+  return title.split(' ').slice(0,12).join(' ') + '...';
   }
   return title;
 }
@@ -43,10 +43,10 @@ class StoriesList extends React.Component {
             onChange={this.props.onInputChange}
           />
         </form>
-        <Grid>
+        <Grid className="card-grid-container" >
           {this.props.storiesList.map((story, index) => {
             return (
-              <div style={{ marginBottom: '1em' }} key={index}>
+              <div className="card-container" key={index}>
                 <Card href={story.url} target="_blank">
                   <Image className="story-thumbnail" src={story.urlToImage} />
                   <Card.Content className="card-content">

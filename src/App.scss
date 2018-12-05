@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -18,4 +23,9 @@
 }
 .newspaper-icon {
   margin-right: .4em;
+}
+
+.card-container {
+  margin: auto;
+  margin-bottom: 1em;
 }
