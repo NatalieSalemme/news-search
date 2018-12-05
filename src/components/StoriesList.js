@@ -41,7 +41,7 @@ class StoriesList extends React.Component {
     return (
       <div>
           <Menu />
-        <h1>StoriesList</h1>
+        <h1>News when YOU need it</h1>
         <form onSubmit={e => this.props.onInputSubmit(e, this.props.inputText)}>
           <input
             className="search-input"
