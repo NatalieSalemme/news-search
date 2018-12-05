@@ -17,9 +17,10 @@ const reducer = (state = initialState, action) => {
       });
 
     default:
-    console.log(state);
+
       return state;
   }
+
 };
 const store = createStore(reducer);
 export default store;

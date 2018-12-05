@@ -11,7 +11,6 @@ export default class MenuExampleSecondary extends Component {
 
   render() {
     const newspaperIcon = <FontAwesomeIcon icon={faNewspaper} />
-    console.log(this.state);
     const { activeItem } = this.state
     return (
 

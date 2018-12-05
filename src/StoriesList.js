@@ -13,6 +13,20 @@ function matchMe(str) {
   return results;
 }
 
+function trimDescription(desc) {
+  if(desc.length > 150) {
+    return desc.split(' ').slice(0,30).join(' ') + '...';
+  }
+  return desc;
+}
+
+function trimTitle(title) {
+  if(title.length > 40) {
+  return title.split(' ').slice(0,10).join(' ') + '...';
+  }
+  return title;
+}
+
 class StoriesList extends React.Component {
   componentDidMount(dispatch) {
     this.props.onInitialLoad();
@@ -36,15 +50,11 @@ class StoriesList extends React.Component {
                 <Card href={story.url} target="_blank">
                   <Image className="story-thumbnail" src={story.urlToImage} />
                   <Card.Content className="card-content">
-                    <Card.Header>{story.title}</Card.Header>
+                    <Card.Header>{trimTitle(story.title)}</Card.Header>
                     <Card.Meta>{matchMe(story.publishedAt)}</Card.Meta>
                     <Card.Description>
-                      {story.description.length > 150
-                        ? story.description
-                            .split(' ')
-                            .slice(0, 20)
-                            .join(' ') + '...'
-                        : story.description}
+
+                      {trimDescription(story.description)}
                     </Card.Description>
                   </Card.Content>
                 </Card>
@@ -61,6 +71,7 @@ class StoriesList extends React.Component {
 
 
 const mapStateToProps = state => {
+    console.log(state);
   return {
     storiesList: state.storiesList,
     inputText: state.inputText,
