@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
 import './App.scss';
 import store from './store/';
-import StoriesList from './StoriesList';
-import Api from './Api';
+import StoriesList from './components/StoriesList';
+import Api from './components/Api';
+import Menu from './components/Menu';
+import { Provider } from 'react-redux';
 
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Link
+} from 'react-router-dom';
 
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <StoriesList store={store} />
+        <Provider store={store}>
+          <StoriesList store={store} />
+        </Provider>
+
       </div>
+
     );
   }
 }

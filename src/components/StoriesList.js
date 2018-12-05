@@ -34,7 +34,7 @@ class StoriesList extends React.Component {
   render() {
     return (
       <div>
-        <Menu />
+          <Menu />
         <h1>StoriesList</h1>
         <form onSubmit={e => this.props.onInputSubmit(e, this.props.inputText)}>
           <input
