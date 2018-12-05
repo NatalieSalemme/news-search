@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import getStories from './Api';
 import Menu from './Menu';
 import Api from './Api';
-
-import { Card, Icon, Image, Grid } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Card, Icon, Image, Grid, Button } from 'semantic-ui-react';
 
 function matchMe(str) {
   let regEx = /\d{4}\-\d{2}\-\d{2}/;
@@ -15,14 +15,14 @@ function matchMe(str) {
 
 function trimDescription(desc) {
   if(desc.length > 150) {
-    return desc.split(' ').slice(0,25).join(' ') + '...';
+    return desc.split(' ').slice(0,19).join(' ') + '...';
   }
   return desc;
 }
 
 function trimTitle(title) {
   if(title.length > 40) {
-  return title.split(' ').slice(0,12).join(' ') + '...';
+  return title.split(' ').slice(0,8).join(' ') + '...';
   }
   return title;
 }
@@ -52,10 +52,14 @@ class StoriesList extends React.Component {
                   <Card.Content className="card-content">
                     <Card.Header>{trimTitle(story.title)}</Card.Header>
                     <Card.Meta>{matchMe(story.publishedAt)}</Card.Meta>
-                    <Card.Description>
+                    <Button basic color='red'>
 
+                      <Link to={{ pathname: `/storypage/${story.title.slice(0,33)}`}}>View Recipe</Link>
+                    </Button>
+                    <Card.Description>
                       {trimDescription(story.description)}
                     </Card.Description>
+
                   </Card.Content>
                 </Card>
               </div>

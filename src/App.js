@@ -6,13 +6,6 @@ import Api from './components/Api';
 import Menu from './components/Menu';
 import { Provider } from 'react-redux';
 
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Link
-} from 'react-router-dom';
-
 class App extends Component {
 
   render() {
