@@ -6,10 +6,8 @@ const testing = dispatch =>{
       `https://newsapi.org/v2/top-headlines?country=us&apiKey=4b5432de54474b7d93433606ff8e126c`
     )
     .then(response => {
-      console.log('response length', response.length);
       dispatch({type: 'ON_INITIAL_LOAD', storiesList: response.data.articles
       });
-          console.log(response.length);
     });
 
 }

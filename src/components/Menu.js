@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Input, Menu, Header, Grid } from 'semantic-ui-react';
+import { Input, Menu } from 'semantic-ui-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNewspaper} from '@fortawesome/free-solid-svg-icons';
 
