@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 const initialState = {
   storiesList: [],
   inputText: '',
-  selectedStory: null
+  selectedStory: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -17,13 +17,13 @@ const reducer = (state = initialState, action) => {
         inputText: '',
       });
     case 'ON_STORY_SELECT':
-      return Object.assign({}, state, {selectedStory: action.selectedStory});
+      return Object.assign({}, state, { selectedStory: action.selectedStory });
     default:
-
       return state;
   }
-
 };
-const store = createStore(reducer,
- window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 export default store;

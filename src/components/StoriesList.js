@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Menu from './Menu';
 import Api from './Api';
 import { Link } from 'react-router-dom';
-import { Card, Image, Grid, Button, Placeholder } from 'semantic-ui-react';
+import { Card, Image, Grid, Button } from 'semantic-ui-react';
 
 function matchMe(str) {
   let regEx = /\d{4}-\d{2}-\d{2}/;
@@ -13,14 +13,15 @@ function matchMe(str) {
 }
 
 function trimDescription(desc) {
-  console.log(this.props);
-  if (desc.length > 150) {
-    return (
-      desc
-        .split(' ')
-        .slice(0, 19)
-        .join(' ') + '...'
-    );
+  if (desc) {
+    if (desc.length > 150) {
+      return (
+        desc
+          .split(' ')
+          .slice(0, 19)
+          .join(' ') + '...'
+      );
+    }
   }
   return desc;
 }
@@ -83,13 +84,7 @@ class StoriesList extends React.Component {
                     <Card.Meta>{matchMe(story.publishedAt)}</Card.Meta>
 
                     <Card.Description>
-                      <p>
-                        {story.description
-                          .split(' ')
-                          .slice(0, 22)
-                          .join(' ')}
-                        ...
-                      </p>
+                      <p>{trimDescription(story.description)}</p>
                     </Card.Description>
                   </Card.Content>
                 </Card>
