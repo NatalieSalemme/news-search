@@ -1,10 +1,11 @@
 import React from 'react';
 import Menu from './Menu';
+import { Header } from 'semantic-ui-react';
 
 const About = props => (
   <div>
     <Menu />
-    <h1>About Page</h1>
+    <Header as="h1">About Us</Header>
   </div>
 );
 
