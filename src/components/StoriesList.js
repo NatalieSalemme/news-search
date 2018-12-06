@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Menu from './Menu';
 import Api from './Api';
 import { Link } from 'react-router-dom';
 import { Card, Image, Grid, Button } from 'semantic-ui-react';
@@ -45,15 +44,7 @@ class StoriesList extends React.Component {
   render() {
     return (
       <div>
-        <Menu />
-        <h1>News when YOU need it</h1>
-        <form onSubmit={e => this.props.onInputSubmit(e, this.props.inputText)}>
-          <input
-            className="search-input"
-            value={this.props.inputText}
-            onChange={this.props.onInputChange}
-          />
-        </form>
+        <h1 style={{marginBottom: '2em'}}>News when YOU need it</h1>
         <Grid className="card-grid-container">
           {this.props.storiesList.map((story, index) => {
             return (

@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './App.scss';
 import StoriesList from './components/StoriesList';
-class App extends Component {
+import MainMenu from './components/Menu';
 
+class App extends Component {
   render() {
     return (
       <div className="App">
-          <StoriesList />
+        <MainMenu />
+        <StoriesList />
       </div>
-
-
-
     );
   }
 }
