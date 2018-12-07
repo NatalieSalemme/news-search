@@ -23,8 +23,25 @@ body {
     text-align: center;
   }
 }
+
+.contact-info {
+  // text-align: center;
+  .icon {
+    border: 1px dotted pink;
+  }
+}
+
+
+
+.contact-image {
+  display: relative;
+}
+.form-container {
+  width: 70%;
+  margin: auto;
+}
 .contact-container {
-  margin: 20em 0;
+  margin: 10em 0 10em;
 }
 .story-thumbnail {
   height: 13em;
