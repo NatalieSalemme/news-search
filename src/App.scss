@@ -8,6 +8,9 @@ body {
 .App {
   text-align: center;
 }
+.icon {
+  color: rgb(161, 192, 251);
+}
 
 .story-thumbnail {
   height: 13em;
@@ -17,6 +20,7 @@ body {
   position: relative;
   bottom: 2.4em;
 }
+
 
 .main-header {
   color: rgb(161, 192, 251);
@@ -39,7 +43,8 @@ body {
 }
 .story-page-container {
   text-align: center;
-  margin-bottom: 4em;
+  padding: 9em 0;
+  background-color: white;
 }
 .content-container {
   width: 40%;
@@ -51,6 +56,7 @@ body {
   width: 40%;
   height: 20%
 }
+
 .published {
   padding: 1em 0;
 }
@@ -58,3 +64,51 @@ body {
   position: relative;
   top: 16em;
 }
+.footer-container {
+  margin-top: 2em;
+  height: 14em;
+  background-color: #1A1C1D;
+  width: 100%;
+}
+.list-item {
+  color: white;
+}
+
+.ui.list .list>a.item, .ui.list>a.item {
+    cursor: pointer;
+    color: white;
+}
+.ui.list .list>a.item, .ui.list>a.item:hover {
+    color: rgb(161, 192, 251);
+}
+
+/*------ NEWS ICONS ----- */
+.al-icon {
+  margin: 0 0 0 .5em;
+}
+.al-jazeera-icon {
+  margin: 0 0 0 .5em;
+}
+.cbs-icon {
+  margin-left: .4em;
+  margin-bottom: -1em;
+}
+.nbc-icon {
+  margin: 0 0 0 .5em;
+
+}
+.npr-icon {
+  margin: 0 0 -.5em .5em;
+}
+.vice-icon {
+  margin-bottom: -1.8em;
+}
+.fantasy-pros-icon {
+  margin: 0 0 -1.8em -.5em;
+}
+.news-9-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 -.5em .5em;
+}
+/*------ NEWS ICONS ----- */

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Api from './Api';
 import { Link } from 'react-router-dom';
 import { Card, Image, Grid, Button } from 'semantic-ui-react';
+import Footer from './Footer';
 
 function matchMe(str) {
   let regEx = /\d{4}-\d{2}-\d{2}/;
@@ -43,7 +44,7 @@ class StoriesList extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{marginTop: '8em'}}>
         <h1 style={{marginBottom: '2em'}}>News when YOU need it</h1>
         <Grid className="card-grid-container">
           {this.props.storiesList.map((story, index) => {
@@ -83,6 +84,7 @@ class StoriesList extends React.Component {
             );
           })}
         </Grid>
+        <Footer />
       </div>
     );
   }
@@ -99,14 +101,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onInputChange: e => {
-      const action = { type: 'ON_INPUT_CHANGE', text: e.target.value };
-      dispatch(action);
-    },
-    onInputSubmit: (e, query) => {
-      e.preventDefault();
-      Api.getStories(dispatch, query);
-    },
     onInitialLoad: () => {
       Api.testing(dispatch);
     },
