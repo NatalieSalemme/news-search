@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Icon } from 'semantic-ui-react';
 import Menu from './Menu';
+import Footer from './Footer';
 import determineLink from './IconFunction';
 
 function matchMe(str) {
@@ -24,6 +25,7 @@ class StoryPage extends Component {
     } = this.props.selectedStory;
 
     return (
+      <div>
       <div className="story-page-container">
         <Menu />
         <h1 className="title-container">{title}</h1>
@@ -45,6 +47,9 @@ class StoryPage extends Component {
         <Button color="instagram">
           <Icon name="instagram" /> Instagram
         </Button>
+
+      </div>
+      <Footer />
       </div>
     );
   }

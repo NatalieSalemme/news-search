@@ -1,27 +1,63 @@
 import React from 'react';
-import { List, Container } from 'semantic-ui-react';
+import { List, Container, Grid, Header } from 'semantic-ui-react';
 
 const Footer = () => (
   <div className="footer-container">
   <Container >
-  <List horizontal >
-    <List.Item className="list-item" href="#">About Us</List.Item>
-    <List.Item className="list-item" href="#">Careers</List.Item>
-    <List.Item className="list-item" href="#">Employment</List.Item>
-  </List>
-  <br />
-    <List horizontal>
+    <Grid columns={3} divided >
+      <Grid.Row className="footer-links-container">
+        <Grid.Column>
+          <List.Item className="list-item" href="#">About Us</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Careers</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Employment</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Travel</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Nature</List.Item>
+        </Grid.Column>
+        <Grid.Column>
 
-      <List.Item className="list-item" href="#">Terms of Service</List.Item>
-      <List.Item className="list-item" href="#">Privacy Policy</List.Item>
-      <List.Item className="list-item" href="#">Contact</List.Item>
-      <List.Item className="list-item" href="#">Sitemap</List.Item>
-      <List.Item className="list-item" href="#">Advertise</List.Item>
-      <List.Item href="#">
-        © Natalie Salemme 2018
-      </List.Item>
-    </List>
-    <hr />
+          <List.Item className="list-item" href="#">News</List.Item>
+            <br />
+          <List.Item className="list-item" href="#">Food</List.Item>
+            <br />
+          <List.Item className="list-item" href="#">Local</List.Item>
+            <br />
+          <List.Item className="list-item" href="#">Sports</List.Item>
+            <br />
+          <List.Item className="list-item" href="#">Culture</List.Item>
+
+        </Grid.Column>
+        <Grid.Column>
+          <List.Item className="list-item" href="#">TV</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Weather</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Terms of Service</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Privacy Policy</List.Item>
+          <br />
+          <List.Item className="list-item" href="#">Contact</List.Item>
+
+        </Grid.Column>
+      </Grid.Row>
+
+      <br />
+      <Grid>
+      <Grid.Row>
+        <Container>
+          <List.Item className="list-item copyright">
+            © Natalie Salemme 2018
+          </List.Item>
+      </Container>
+      </Grid.Row>
+    </Grid>
+    </Grid>
+
+
+
 
   </Container>
   </div>
