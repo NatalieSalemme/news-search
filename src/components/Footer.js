@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Container, Grid, Header } from 'semantic-ui-react';
+import { List, Container, Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
@@ -10,27 +10,27 @@ const Footer = () => (
         <Grid.Column>
           <Link
             to="/about">
-            <List.Item className="list-item" href="#">About Us</List.Item>
+            <List.Item className="list-item" >About Us</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Careers</List.Item>
+            <List.Item className="list-item">Careers</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Employment</List.Item>
+            <List.Item className="list-item">Employment</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Travel</List.Item>
+            <List.Item className="list-item">Travel</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Nature</List.Item>
+            <List.Item className="list-item">Nature</List.Item>
             <br />
           </Link>
         </Grid.Column>
@@ -39,27 +39,27 @@ const Footer = () => (
         <Grid.Column>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">News</List.Item>
+            <List.Item className="list-item">News</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Food</List.Item>
+            <List.Item className="list-item">Food</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Local</List.Item>
+            <List.Item className="list-item">Local</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Sports</List.Item>
+            <List.Item className="list-item">Sports</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Culture</List.Item>
+            <List.Item className="list-item">Culture</List.Item>
             <br />
           </Link>
 
@@ -67,27 +67,27 @@ const Footer = () => (
         <Grid.Column>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">TV</List.Item>
+            <List.Item className="list-item">TV</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Weather</List.Item>
+            <List.Item className="list-item">Weather</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Terms of Service</List.Item>
+            <List.Item className="list-item">Terms of Service</List.Item>
             <br />
           </Link>
           <Link
             to="/ComingSoon">
-            <List.Item className="list-item" href="#">Privacy Policy</List.Item>
+            <List.Item className="list-item">Privacy Policy</List.Item>
             <br />
           </Link>
           <Link
             to="/contact">
-            <List.Item className="list-item" href="#">Contact</List.Item>
+            <List.Item className="list-item">Contact</List.Item>
             <br />
           </Link>
 

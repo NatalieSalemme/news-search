@@ -15,29 +15,26 @@ class MainMenu extends Component {
     const newspaperIcon = <FontAwesomeIcon icon={faNewspaper} />;
     const { activeItem } = this.state;
     return (
+      <div>
       <Menu fixed="top" inverted size="massive">
         <Menu.Item
+          as={Link} to="/home"
           name="home"
           active={activeItem === 'home'}
-          onClick={this.handleItemClick}
-        >
-          <Link to="/">Home</Link>
-        </Menu.Item>
+          onClick={this.handleItemClick} />
 
         <Menu.Item
+          as={Link} to="/about"
           name="about"
           active={activeItem === 'about'}
-          onClick={this.handleItemClick}
-        >
-          <Link to="/about">About</Link>
-        </Menu.Item>
+          onClick={this.handleItemClick} />
+
         <Menu.Item
+          as={Link} to="/contact"
           name="contact"
           active={activeItem === 'contact'}
-          onClick={this.handleItemClick}
-        >
-          <Link to="/contact">Contact</Link>
-        </Menu.Item>
+          onClick={this.handleItemClick} />
+
         <Menu.Header as="h1" color="blue" className="main-header">
           <span className="newspaper-icon">{newspaperIcon}</span>
           News Search
@@ -67,6 +64,7 @@ class MainMenu extends Component {
           />
         </Menu.Menu>
       </Menu>
+      </div>
     );
   }
 }

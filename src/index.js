@@ -3,15 +3,12 @@ import ReactDOM from 'react-dom';
 import './App.scss';
 import { Provider } from 'react-redux';
 import Router from './components/Router';
-import App from './App';
 import store from './store';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <App />
-    </Router>
+    <Router />
   </Provider>,
   document.getElementById('root')
 );
