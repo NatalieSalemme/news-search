@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input, Menu, Icon } from 'semantic-ui-react';
+import { Input, Menu } from 'semantic-ui-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -15,7 +15,7 @@ class MainMenu extends Component {
     const newspaperIcon = <FontAwesomeIcon icon={faNewspaper} />;
     const { activeItem } = this.state;
     return (
-      <Menu fixed="top" inverted size="massive" >
+      <Menu fixed="top" inverted size="massive">
         <Menu.Item
           name="home"
           active={activeItem === 'home'}
