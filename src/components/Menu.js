@@ -18,7 +18,7 @@ class MainMenu extends Component {
       <div>
       <Menu fixed="top" inverted size="massive">
         <Menu.Item
-          as={Link} to="/home"
+          as={Link} to="/"
           name="home"
           active={activeItem === 'home'}
           onClick={this.handleItemClick} />
