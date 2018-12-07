@@ -1,12 +1,13 @@
 import React from 'react';
+import App from '../App';
+import ComingSoon from './ComingSoon';
+import StoryPage from './StoryPage';
+import About from './About';
+import Contact from './Contact';
 import {
   BrowserRouter,
   Switch,
   Route } from 'react-router-dom';
-  import App from '../App';
-  import StoryPage from './StoryPage';
-  import About from './About';
-  import Contact from './Contact';
 
   const Router = () => (
     <BrowserRouter>
@@ -15,6 +16,8 @@ import {
         <Route path="/storypage/:id" component={StoryPage} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/coming-soon" component={ComingSoon} />
+        <Route component={ComingSoon} />
       </Switch>
     </BrowserRouter>
   )

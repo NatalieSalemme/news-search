@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
 }
+.about-container {
+  margin: 20em 0;
+  text-align: center;
+
+}
+
 body {
   background-color: rgb(244, 244, 244);
 }
@@ -11,7 +17,15 @@ body {
 .icon {
   color: rgb(161, 192, 251);
 }
-
+.coming-soon-container {
+  margin: 20em 0;
+  h1 {
+    text-align: center;
+  }
+}
+.contact-container {
+  margin: 20em 0;
+}
 .story-thumbnail {
   height: 13em;
 }
@@ -74,6 +88,7 @@ body {
 }
 .footer-links-container {
   margin-top: 4em;
+  text-align: center;
 }
 .list-item {
   color: white;
@@ -99,6 +114,7 @@ body {
 .copyright {
   margin-top: 4em;
   font-size: 15px;
+  text-align: center;
 }
 /*------ NEWS ICONS ----- */
 .al-icon {
