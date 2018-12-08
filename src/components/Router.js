@@ -4,6 +4,7 @@ import ComingSoon from './FooterLink/ComingSoon';
 import StoryPage from './StoryPage';
 import About from './FooterLink/About';
 import Contact from './FooterLink/Contact';
+import Travel from './FooterLink/Travel';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Router = () => (
@@ -14,6 +15,7 @@ const Router = () => (
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/coming-soon" component={ComingSoon} />
+      <Route path="/travel" component={Travel} />
       <Route component={ComingSoon} />
     </Switch>
   </BrowserRouter>

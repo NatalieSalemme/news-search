@@ -1,6 +1,8 @@
 import React from 'react';
 import { List, Container, Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Api from './Api';
 
 const Footer = () => (
   <div className="footer-container">
@@ -20,7 +22,7 @@ const Footer = () => (
               <List.Item className="list-item">Employment</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/travel">
               <List.Item className="list-item">Travel</List.Item>
               <br />
             </Link>
@@ -91,4 +93,24 @@ const Footer = () => (
   </div>
 );
 
-export default Footer;
+const mapStateToProps = state => {
+  return {
+    storiesList: state.storiesList,
+    inputText: state.inputText,
+    selectedStory: state.selectedStory,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onStorySelect: (e, story) => {
+      const action = { type: 'ON_STORY_SELECT', selectedStory: e };
+      dispatch(action);
+    },
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Footer);

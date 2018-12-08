@@ -15,55 +15,65 @@ class MainMenu extends Component {
     const newspaperIcon = <FontAwesomeIcon icon={faNewspaper} />;
     const { activeItem } = this.state;
     return (
-      <div>
-      <Menu fixed="top" inverted size="massive">
-        <Menu.Item
-          as={Link} to="/"
-          name="home"
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick} />
-
-        <Menu.Item
-          as={Link} to="/about"
-          name="about"
-          active={activeItem === 'about'}
-          onClick={this.handleItemClick} />
-
-        <Menu.Item
-          as={Link} to="/contact"
-          name="contact"
-          active={activeItem === 'contact'}
-          onClick={this.handleItemClick} />
-
-        <Menu.Header as="h1" color="blue" className="main-header">
-          <span className="newspaper-icon">{newspaperIcon}</span>
-          News Search
-        </Menu.Header>
-
-        <Menu.Menu position="right">
-          <Menu.Item>
-            <form
-              onSubmit={e => this.props.onInputSubmit(e, this.props.inputText)}
-            >
-              <Input
-                onClick={e => this.props.onInputSubmit(e, this.props.inputText)}
-                className="search-input"
-                value={this.props.inputText}
-                onChange={this.props.onInputChange}
-                icon="search"
-                size="large"
-                placeholder="Search..."
-              />
-            </form>
-          </Menu.Item>
+      <div className="menu-container">
+        <Menu fixed="top" inverted size="massive">
           <Menu.Item
-            position="right"
-            name="logout"
-            active={activeItem === 'logout'}
+            as={Link}
+            to="/"
+            name="home"
+            active={activeItem === 'home'}
             onClick={this.handleItemClick}
           />
-        </Menu.Menu>
-      </Menu>
+
+          <Menu.Item
+            as={Link}
+            to="/about"
+            name="about"
+            active={activeItem === 'about'}
+            onClick={this.handleItemClick}
+          />
+
+          <Menu.Item
+            as={Link}
+            to="/contact"
+            name="contact"
+            active={activeItem === 'contact'}
+            onClick={this.handleItemClick}
+          />
+
+          <Menu.Header as="h1" color="blue" className="main-header">
+            <span className="newspaper-icon">{newspaperIcon}</span>
+            News Search
+          </Menu.Header>
+
+          <Menu.Menu position="right">
+            <Menu.Item>
+              <form
+                onSubmit={e =>
+                  this.props.onInputSubmit(e, this.props.inputText)
+                }
+              >
+                <Input
+                  onClick={e =>
+                    this.props.onInputSubmit(e, this.props.inputText)
+                  }
+                  className="search-input"
+                  value={this.props.inputText}
+                  onChange={this.props.onInputChange}
+                  icon="search"
+                  size="large"
+                  placeholder="Search..."
+                />
+              </form>
+            </Menu.Item>
+            <Menu.Item
+              position="right"
+              name="logout"
+              active={activeItem === 'logout'}
+              onClick={this.handleItemClick}
+            />
+          </Menu.Menu>
+        </Menu>
       </div>
     );
   }
