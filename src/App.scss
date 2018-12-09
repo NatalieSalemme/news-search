@@ -144,7 +144,66 @@ body {
     margin-left: 1em;
   }
 }
+.career-img {
+  display: block;
+  margin: auto;
+  margin-top: -24.5em;
+  width: 60em;
+  height: 40em;
+}
 
+
+#pointer {
+      width: 250px;
+      height: 40px;
+      position: relative;
+      bottom: 20px;
+      left: 889px;
+      background: darken(rgb(161, 192, 251), 10%);
+    }
+    #pointer:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid white;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+
+.banner-text {
+  position: relative;
+  left: 25px;
+  top: 7px;
+  color: white;
+}
+.career-action {
+  color: darken(rgb(161, 192, 251), 20%);
+  position: relative;
+  left: 750px;
+  top: 30px;
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    width: 280px;
+    margin-left: 30px;
+    font-weight: 100;
+    font-size: 25px;
+  }
+  .apply-button {
+    background-color: darken(rgb(161, 192, 251), 30%);
+    color: white;
+    font-weight: bold;
+    margin: 20px 0 0 75px;
+  }
+  .apply-button:hover {
+    background-color: rgb(161, 192, 251);
+    color: darken(rgb(161, 192, 251), 30%);
+  }
+}
 /*------ NEWS ICONS ----- */
 .al-icon {
   margin: 0 0 0 .5em;

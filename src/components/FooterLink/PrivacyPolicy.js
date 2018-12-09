@@ -1,6 +1,5 @@
 import React from 'react';
 import Menu from '../Menu';
-import StoriesList from '../StoriesList';
 import Footer from '../Footer';
 
 const PrivacyPolicy = () => (

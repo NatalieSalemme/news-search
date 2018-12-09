@@ -3,6 +3,7 @@ import App from '../App';
 import ComingSoon from './FooterLink/ComingSoon';
 import StoryPage from './StoryPage';
 import About from './FooterLink/About';
+import Careers from './FooterLink/Careers';
 import Contact from './FooterLink/Contact';
 import Travel from './FooterLink/Travel';
 import Nature from './FooterLink/Nature';
@@ -15,6 +16,7 @@ import TV from './FooterLink/TV';
 import Weather from './FooterLink/Weather';
 import TermsOfService from './FooterLink/TermsOfService';
 import PrivacyPolicy from './FooterLink/PrivacyPolicy';
+import Tech from './FooterLink/Tech';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -24,6 +26,8 @@ const Router = () => (
       <Route exact path="/" component={App} />
       <Route path="/storypage/:id" component={StoryPage} />
       <Route path="/about" component={About} />
+      <Route path="/careers" component={Careers} />
+      <Route path="/tech" component={Tech} />
       <Route path="/contact" component={Contact} />
       <Route path="/coming-soon" component={ComingSoon} />
       <Route path="/travel" component={Travel} />

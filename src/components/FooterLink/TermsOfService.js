@@ -264,7 +264,6 @@ const TermsOfService = props => (
         website are provided free of charge, we will not be liable for any loss
         or damage of any nature.
       </p>
-      <h2 />
       <p />
     </div>
     <Footer />

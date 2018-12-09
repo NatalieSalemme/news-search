@@ -2,7 +2,6 @@ import React from 'react';
 import { List, Container, Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Api from './Api';
 
 const Footer = () => (
   <div className="footer-container">
@@ -14,12 +13,12 @@ const Footer = () => (
               <List.Item className="list-item">About Us</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/careers">
               <List.Item className="list-item">Careers</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
-              <List.Item className="list-item">Employment</List.Item>
+            <Link to="/tech">
+              <List.Item className="list-item">Tech</List.Item>
               <br />
             </Link>
             <Link to="/travel">
