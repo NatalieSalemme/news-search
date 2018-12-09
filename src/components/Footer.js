@@ -63,7 +63,7 @@ const Footer = () => (
               <List.Item className="list-item">Weather</List.Item>
               <br />
             </Link>
-            <Link to="/termsofservice">
+            <Link to="/terms">
               <List.Item className="list-item">Terms of Service</List.Item>
               <br />
             </Link>

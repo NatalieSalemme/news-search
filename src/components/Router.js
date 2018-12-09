@@ -35,8 +35,8 @@ const Router = () => (
       <Route path="/culture" component={Culture} />
       <Route path="/tv" component={TV} />
       <Route path="/weather" component={Weather} />
-      <Route path="termsofservice" component={TermsOfService} />
-      <Route path="privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms" component={TermsOfService} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route component={ComingSoon} />
     </Switch>
   </BrowserRouter>
