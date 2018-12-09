@@ -41,9 +41,11 @@ function trimTitle(title) {
 
 class StoriesList extends React.Component {
   componentDidMount(dispatch) {
-    this.props.onInitialLoad();
+    console.log(this.props.query);
+    this.props.onStoryLoad(this.props.queryText);
   }
   render() {
+    console.log('query text is', this.props.queryText);
     return (
       <div style={{ marginTop: '8em' }}>
         <h1 style={{ marginBottom: '2em' }}>{this.props.title}</h1>
@@ -113,6 +115,9 @@ const mapDispatchToProps = dispatch => {
       console.log(e);
       const action = { type: 'ON_STORY_SELECT', selectedStory: e };
       dispatch(action);
+    },
+    onStoryLoad: query => {
+      Api.storyLoad(dispatch, query);
     },
   };
 };

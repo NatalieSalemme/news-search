@@ -5,6 +5,8 @@ import StoryPage from './StoryPage';
 import About from './FooterLink/About';
 import Contact from './FooterLink/Contact';
 import Travel from './FooterLink/Travel';
+import Nature from './FooterLink/Nature';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Router = () => (
@@ -16,6 +18,7 @@ const Router = () => (
       <Route path="/contact" component={Contact} />
       <Route path="/coming-soon" component={ComingSoon} />
       <Route path="/travel" component={Travel} />
+      <Route path="/nature" component={Nature} />
       <Route component={ComingSoon} />
     </Switch>
   </BrowserRouter>

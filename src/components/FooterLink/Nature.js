@@ -1,11 +1,11 @@
 import React from 'react';
 import Menu from '../Menu';
 import StoriesList from '../StoriesList';
-const Travel = () => (
+const Nature = () => (
   <div style={{ textAlign: 'center' }}>
     <Menu />
-    <StoriesList title="Travel News" queryText="travel" />
+    <StoriesList title="Nature News" queryText="nature" />
   </div>
 );
 
-export default Travel;
+export default Nature;

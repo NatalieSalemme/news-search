@@ -26,7 +26,7 @@ const Footer = () => (
               <List.Item className="list-item">Travel</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/nature">
               <List.Item className="list-item">Nature</List.Item>
               <br />
             </Link>

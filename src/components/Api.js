@@ -27,4 +27,17 @@ function getStories(dispatch, query) {
     });
 }
 
-export default { getStories, testing };
+const storyLoad = (dispatch, query) => {
+  axios
+    .get(
+      `https://newsapi.org/v2/everything?q=${query}&apiKey=4b5432de54474b7d93433606ff8e126c`
+    )
+    .then(response => {
+      dispatch({
+        type: 'ON_INITIAL_LOAD',
+        storiesList: response.data.articles,
+      });
+    });
+};
+
+export default { storyLoad, getStories, testing };
