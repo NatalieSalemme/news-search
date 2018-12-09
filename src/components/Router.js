@@ -6,6 +6,15 @@ import About from './FooterLink/About';
 import Contact from './FooterLink/Contact';
 import Travel from './FooterLink/Travel';
 import Nature from './FooterLink/Nature';
+import Hollywood from './FooterLink/Hollywood';
+import Food from './FooterLink/Food';
+import Local from './FooterLink/Local';
+import Sports from './FooterLink/Sports';
+import Culture from './FooterLink/Culture';
+import TV from './FooterLink/TV';
+import Weather from './FooterLink/Weather';
+import TermsOfService from './FooterLink/TermsOfService';
+import PrivacyPolicy from './FooterLink/PrivacyPolicy';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -19,6 +28,15 @@ const Router = () => (
       <Route path="/coming-soon" component={ComingSoon} />
       <Route path="/travel" component={Travel} />
       <Route path="/nature" component={Nature} />
+      <Route path="/hollywood" component={Hollywood} />
+      <Route path="/food" component={Food} />
+      <Route path="/local" component={Local} />
+      <Route path="/sports" component={Sports} />
+      <Route path="/culture" component={Culture} />
+      <Route path="/tv" component={TV} />
+      <Route path="/weather" component={Weather} />
+      <Route path="termsofservice" component={TermsOfService} />
+      <Route path="privacy-policy" component={PrivacyPolicy} />
       <Route component={ComingSoon} />
     </Switch>
   </BrowserRouter>

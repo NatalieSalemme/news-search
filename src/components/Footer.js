@@ -33,41 +33,42 @@ const Footer = () => (
           </Grid.Column>
 
           <Grid.Column>
-            <Link to="/coming-soon">
-              <List.Item className="list-item">News</List.Item>
+            <Link to="/hollywood">
+              <List.Item className="list-item">Hollywood</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/food">
               <List.Item className="list-item">Food</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/local">
               <List.Item className="list-item">Local</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/sports">
               <List.Item className="list-item">Sports</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/culture">
               <List.Item className="list-item">Culture</List.Item>
               <br />
             </Link>
           </Grid.Column>
           <Grid.Column>
-            <Link to="/coming-soon">
+            <Link to="/tv">
               <List.Item className="list-item">TV</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/weather">
               <List.Item className="list-item">Weather</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/termsofservice">
               <List.Item className="list-item">Terms of Service</List.Item>
               <br />
             </Link>
-            <Link to="/coming-soon">
+
+            <Link to="/privacy-policy">
               <List.Item className="list-item">Privacy Policy</List.Item>
               <br />
             </Link>
