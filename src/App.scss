@@ -5,8 +5,8 @@
 .about-container {
   text-align: center;
   .about-img-container {
-    border: 2px dotted pink;
-    height: 530px;
+    width: 90%;
+    margin: auto;
     text-align: left;
     p {
       margin-bottom: .5em;
@@ -116,9 +116,11 @@ body {
 }
 
 .copyright {
+  
   padding-top: 6em;
   font-size: 15px;
   text-align: center;
+  margin: auto;
 }
 .list-item {
   color: white;
@@ -292,3 +294,41 @@ body {
   margin: 0 0 -.5em .5em;
 }
 /*------ NEWS ICONS ----- */
+
+
+/*------ MEDIA QUERIES ----- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+body {
+  background-color: purple;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: orange;
+  }
+}
+/*------ MEDIA QUERIES ----- */

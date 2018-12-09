@@ -47,6 +47,7 @@ class StoriesList extends React.Component {
     } else {
       this.props.onStoryLoad(this.props.queryText);
     }
+    window.scrollTo(0, 0);
   }
   render() {
     console.log('query text is', this.props.queryText);

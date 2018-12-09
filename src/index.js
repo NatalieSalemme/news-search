@@ -5,16 +5,17 @@ import { Provider } from 'react-redux';
 import Router from './components/Router';
 import App from './App';
 import ScrollToTop from './ScrollToTop';
+
 import store from './store';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+      <Router>
       <ScrollToTop>
         <App />
       </ScrollToTop>
-    </Router>
+        </Router>
   </Provider>,
   document.getElementById('root')
 );
