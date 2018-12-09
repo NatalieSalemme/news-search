@@ -41,8 +41,12 @@ function trimTitle(title) {
 
 class StoriesList extends React.Component {
   componentDidMount(dispatch) {
-    console.log(this.props.query);
-    this.props.onStoryLoad(this.props.queryText);
+    console.log(this.props.queryText);
+    if (this.props.queryText === 'trending') {
+      this.props.onInitialLoad();
+    } else {
+      this.props.onStoryLoad(this.props.queryText);
+    }
   }
   render() {
     console.log('query text is', this.props.queryText);
@@ -94,7 +98,7 @@ class StoriesList extends React.Component {
 }
 
 StoriesList.defaultProps = {
-  title: 'News when YOU need it',
+  title: 'Top Trending News',
 };
 
 const mapStateToProps = state => {

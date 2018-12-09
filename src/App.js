@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <MainMenu />
-        <StoriesList />
+        <StoriesList title="Trending News" queryText="trending" />
       </div>
     );
   }
