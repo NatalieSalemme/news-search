@@ -3,9 +3,15 @@
   padding: 0;
 }
 .about-container {
-  margin: 20em 0;
   text-align: center;
-
+  .about-img-container {
+    border: 2px dotted pink;
+    height: 530px;
+    text-align: left;
+    p {
+      margin-bottom: .5em;
+    }
+  }
 }
 
 body {
@@ -193,13 +199,15 @@ body {
     font-weight: 100;
     font-size: 25px;
   }
-  .apply-button {
+  .apply-button,
+  .apply-button:focus {
     background-color: darken(rgb(161, 192, 251), 30%);
     color: white;
     font-weight: bold;
     margin: 20px 0 0 75px;
   }
-  .apply-button:hover {
+  .apply-button:hover,
+  .apply-button:active {
     background-color: rgb(161, 192, 251);
     color: darken(rgb(161, 192, 251), 30%);
   }
