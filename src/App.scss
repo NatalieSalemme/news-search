@@ -80,7 +80,8 @@ body {
   text-align: center;
   padding: 10em 0 13em 0;
   background-color: white;
-  margin-bottom: -2em;
+  margin-bottom: -6em;
+  height: 100%;
 }
 .content-container {
   width: 40%;
@@ -111,12 +112,9 @@ body {
   margin-top: 4em;
   text-align: center;
 }
-.menu-container {
-  margin-bottom: 10em;
-}
 
 .copyright {
-  
+
   padding-top: 6em;
   font-size: 15px;
   text-align: center;
@@ -165,7 +163,7 @@ body {
       width: 250px;
       height: 40px;
       position: relative;
-      bottom: 20px;
+      bottom: 55px;
       left: 889px;
       background: darken(rgb(161, 192, 251), 10%);
     }
@@ -213,6 +211,12 @@ body {
     background-color: rgb(161, 192, 251);
     color: darken(rgb(161, 192, 251), 30%);
   }
+}
+.about-container {
+  margin-top: 9.5em;
+}
+.careers-container {
+  margin-top: 35em;
 }
 /*------ NEWS ICONS ----- */
 .al-icon {
