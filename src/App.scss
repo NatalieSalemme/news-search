@@ -188,17 +188,6 @@ body {
 .career-action {
   color: darken(rgb(161, 192, 251), 20%);
   position: relative;
-  left: 750px;
-  top: 30px;
-  h1 {
-    font-size: 40px;
-  }
-  p {
-    width: 280px;
-    margin-left: 30px;
-    font-weight: 100;
-    font-size: 25px;
-  }
   .apply-button,
   .apply-button:focus {
     background-color: darken(rgb(161, 192, 251), 30%);
@@ -216,7 +205,10 @@ body {
   margin-top: 9.5em;
 }
 .careers-container {
-  margin-top: 35em;
+  margin: auto;
+  margin-top: 28em;
+  max-width: 70em;
+
 }
 /*------ NEWS ICONS ----- */
 .al-icon {
@@ -306,6 +298,14 @@ body {
   body {
     background-color: blue;
   }
+  .career-action {
+    left: 13em;
+    bottom: 7em;
+    margin: auto;
+  }
+  .careers-container {
+    margin-top: 30em;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -313,19 +313,37 @@ body {
   body {
     background-color: green;
   }
+  .career-action {
+    left: 20em;
+    bottom: 10em;
+  }
+  .careers-container {
+    margin-top: 30em;
+  }
+
 }
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 body {
   background-color: purple;
 }
+.career-action {
+  left: 34em;
+  bottom: 12em;
+}
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
     background-color: red;
+  }
+  .career-action {
+    left: 39em;
+    bottom: 14em;
   }
 }
 
