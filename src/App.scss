@@ -306,6 +306,10 @@ body {
   .careers-container {
     margin-top: 30em;
   }
+  .copyright {
+    width: 100vw;
+    margin: auto;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -320,6 +324,10 @@ body {
   .careers-container {
     margin-top: 30em;
   }
+  .copyright {
+    width: 100vw;
+    margin: auto;
+  }
 
 }
 
@@ -333,7 +341,10 @@ body {
   left: 34em;
   bottom: 12em;
 }
-
+.copyright {
+  width: 100%;
+  margin: auto;
+}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

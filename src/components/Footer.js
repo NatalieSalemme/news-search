@@ -10,7 +10,7 @@ const Footer = () => (
         <Grid.Row className="footer-links-container">
           <Grid.Column>
             <Link to="/about">
-              <List.Item className="list-item">About Us</List.Item>
+              <List.Item className="list-item">About </List.Item>
               <br />
             </Link>
             <Link to="/careers">
@@ -80,7 +80,7 @@ const Footer = () => (
 
         <br />
         <Grid>
-          <Grid.Row>
+          <Grid.Row  >
             <Container>
               <List.Item className="list-item copyright">
                 © Natalie Salemme 2018
