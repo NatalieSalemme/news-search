@@ -16,8 +16,9 @@ class MainMenu extends Component {
     const { activeItem } = this.state;
     return (
       <div className="menu-container">
-        <Menu fixed="top" inverted size="massive">
+        <Menu fixed="top" inverted stackable size="massive">
           <Menu.Item
+            className="first-menu-item"
             as={Link}
             to="/"
             name="home"
@@ -41,12 +42,12 @@ class MainMenu extends Component {
             onClick={this.handleItemClick}
           />
 
-          <Menu.Header as="h1" color="blue" className="main-header">
+          <Menu.Header as="h1" color="blue" fixed="left" className="main-header">
             <span className="newspaper-icon">{newspaperIcon}</span>
             News Search
           </Menu.Header>
 
-          <Menu.Menu position="right">
+          <Menu.Menu >
             <Menu.Item>
               <form
                 onSubmit={e =>

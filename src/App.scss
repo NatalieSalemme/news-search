@@ -310,6 +310,17 @@ body {
     width: 100vw;
     margin: auto;
   }
+  .menu-container {
+    padding-bottom: 19em;
+    .search-input {
+      height: 2.5em;
+    }
+    .main-header {
+      margin-left: 0.01em;
+      padding-left: .8em;
+    }
+  }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -328,7 +339,13 @@ body {
     width: 100vw;
     margin: auto;
   }
-
+  .main-header {
+    margin-left: 0.01em;
+    padding-left: .8em;
+  }
+  .menu-container {
+    margin-bottom: 22em;
+  }
 }
 
 
@@ -344,6 +361,9 @@ body {
 .copyright {
   width: 100%;
   margin: auto;
+}
+.menu-container {
+  margin-bottom: 7em;
 }
 }
 
