@@ -3,7 +3,7 @@ import Menu from '../Menu';
 import Footer from '../Footer';
 import FormPage from './FormPage';
 
-import { List, Image, Grid } from 'semantic-ui-react';
+import { List, Image, Grid, Message } from 'semantic-ui-react';
 
 class Contact extends React.Component {
   componentDidMount() {
@@ -14,6 +14,7 @@ class Contact extends React.Component {
       <div>
         <div className="contact-container">
           <Menu />
+        
           <h1 style={{ textAlign: 'center' }}>Contact Page</h1>
           <Grid centered stackable>
             <Grid.Row stackable>

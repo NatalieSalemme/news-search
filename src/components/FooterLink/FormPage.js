@@ -7,6 +7,7 @@ import {
   Radio,
   Select,
   TextArea,
+  Message
 } from 'semantic-ui-react';
 
 const options = [
@@ -16,23 +17,36 @@ const options = [
 ];
 
 class FormPage extends Component {
-  state = {};
-
+  state = {
+    success: false,
+    error: false,
+    first: 'test'
+  };
+  handleSubmit = () => {
+    this.setState({
+      success: true,
+      error: false
+    });
+  }
   handleChange = (e, { value }) => this.setState({ value });
 
   render() {
     const { value } = this.state;
     return (
+      <div>
+        {this.state.success && <Message className="message"  color='green' >Success! Your information has been submitted</Message>}
+        {this.state.error && <Message className="message"  color='red' >Error! There was a problem submitting your information. Please try again</Message>}
       <Form className="form-container">
         <Form.Group widths="equal">
           <Form.Field
             width={2}
+            onChange={this.handleChange}
             control={Input}
             label="First name"
             placeholder="First name"
           />
           <Form.Field
-          width={2}
+            width={2}
             control={Input}
             label="Last name"
             placeholder="Last name"
@@ -78,10 +92,11 @@ class FormPage extends Component {
           control={Checkbox}
           label="I agree to the Terms and Conditions"
         />
-        <Form.Field control={Button} color="blue">
+        <Form.Field control={Button} color="blue" onClick={this.handleSubmit}>
           Submit
         </Form.Field>
       </Form>
+    </div>
     );
   }
 }
