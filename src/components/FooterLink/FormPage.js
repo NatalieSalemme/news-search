@@ -20,15 +20,51 @@ class FormPage extends Component {
   state = {
     success: false,
     error: false,
-    first: 'test'
+    first: '',
+    last: '',
+    textArea: '',
+    submitted: false
   };
   handleSubmit = () => {
+    const {first, last, textArea } = this.state;
+    if(first && last && textArea) {
+        this.setState({
+          submitted: true,
+          success: true,
+        });
+      }
+      else {
+        this.setState({
+          submitted: true,
+          error: true
+        })
+      }
+    }
+
+  handleChange = (e, { value }) => this.setState({ value });
+
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
     this.setState({
-      success: true,
+      [name]: value,
+      submitted: false,
+      success: false,
       error: false
     });
+
   }
-  handleChange = (e, { value }) => this.setState({ value });
+
+
+  // handleError = (event) => {
+    // const target = event.target;
+    // const value = target.type === 'checkbox' ? target.checked : target.value;
+    // const name = target.name;
+  //   if(!this.state.submitted && event.target.name === '') {
+  //     return true;
+  //   } return false;
+  // }
 
   render() {
     const { value } = this.state;
@@ -39,13 +75,19 @@ class FormPage extends Component {
       <Form className="form-container">
         <Form.Group widths="equal">
           <Form.Field
+            error={this.handleErro}
+            name="first"
             width={2}
-            onChange={this.handleChange}
+            value={this.state.first}
+            onChange={this.handleInputChange}
             control={Input}
             label="First name"
             placeholder="First name"
           />
           <Form.Field
+            name="last"
+            value={this.state.last}
+            onChange={this.handleInputChange}
             width={2}
             control={Input}
             label="Last name"
@@ -84,6 +126,9 @@ class FormPage extends Component {
           />
         </Form.Group>
         <Form.Field
+          name="textArea"
+          value={this.state.textArea}
+          onChange={this.handleInputChange}
           control={TextArea}
           label="About"
           placeholder="Tell us more about you..."
