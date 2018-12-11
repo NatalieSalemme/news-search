@@ -10,8 +10,9 @@ import {
 } from 'semantic-ui-react';
 
 const options = [
-  { key: 'm', text: 'Male', value: 'male' },
-  { key: 'f', text: 'Female', value: 'female' },
+  { key: 's', text: 'Student', value: 'student' },
+  { key: 'd', text: 'Daily Reader', value: 'daily' },
+  { key: 'r', text: 'Reporter', value: 'reporter' },
 ];
 
 class FormPage extends Component {
@@ -36,13 +37,13 @@ class FormPage extends Component {
           />
           <Form.Field
             control={Select}
-            label="Gender"
+            label="Status"
             options={options}
-            placeholder="Gender"
+            placeholder="Status"
           />
         </Form.Group>
         <Form.Group inline>
-          <label>Quantity</label>
+          <label>Number of Requests</label>
           <Form.Field
             control={Radio}
             label="One"
@@ -74,7 +75,9 @@ class FormPage extends Component {
           control={Checkbox}
           label="I agree to the Terms and Conditions"
         />
-        <Form.Field control={Button}>Submit</Form.Field>
+        <Form.Field control={Button} color="blue">
+          Submit
+        </Form.Field>
       </Form>
     );
   }
