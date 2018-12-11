@@ -26,16 +26,19 @@ class FormPage extends Component {
       <Form className="form-container">
         <Form.Group widths="equal">
           <Form.Field
+            width={2}
             control={Input}
             label="First name"
             placeholder="First name"
           />
           <Form.Field
+          width={2}
             control={Input}
             label="Last name"
             placeholder="Last name"
           />
           <Form.Field
+          width={2}
             control={Select}
             label="Status"
             options={options}

@@ -15,50 +15,58 @@ class Contact extends React.Component {
         <div className="contact-container">
           <Menu />
           <h1 style={{ textAlign: 'center' }}>Contact Page</h1>
-
-          <FormPage />
-
-          <div className="contact-info">
-            <Image
-              centered
-              className="contact-image"
-              alt="Natalie Salemme"
-              src="https://i0.wp.com/yesmillennial.com/wp-content/uploads/2018/10/IMG_4599.jpeg?resize=200%2C200"
-            />
-            <List>
-              <List.Item
-                className="contact-item"
-                icon="users"
-                content="Natalie Salemme"
-              />
-              <List.Item
-                className="contact-item"
-                icon="marker"
-                content="San Diego, CA"
-              />
-              <List.Item
-                className="contact-item"
-                icon="mail"
-                content={
-                  <a href="mailto:nataliesalemme@gmail.com">
-                    nataliesalemme@gmail.com
-                  </a>
-                }
-              />
-              <List.Item
-                className="contact-item"
-                icon="linkify"
-                content={
-                  <a
-                    href="https://github.com/NatalieSalemme/redux-search"
-                    target="_blank"
-                  >
-                    Github
-                  </a>
-                }
-              />
-            </List>
-          </div>
+          <Grid centered stackable>
+            <Grid.Row stackable>
+              <Grid.Column width={4} className="empty-grid-cell" />
+              <Grid.Column width={8}>
+                <FormPage />
+              </Grid.Column>
+              <Grid.Column width={1} className="empty-grid-cell" />
+              <Grid.Column width={3} >
+                <div className="contact-info">
+                  <Image
+                    centered
+                    className="contact-image"
+                    alt="Natalie Salemme"
+                    src="https://i0.wp.com/yesmillennial.com/wp-content/uploads/2018/10/IMG_4599.jpeg?resize=200%2C200"
+                  />
+                  <List>
+                    <List.Item
+                      className="contact-item"
+                      icon="users"
+                      content="Natalie Salemme"
+                    />
+                    <List.Item
+                      className="contact-item"
+                      icon="marker"
+                      content="San Diego, CA"
+                    />
+                    <List.Item
+                      className="contact-item"
+                      icon="mail"
+                      content={
+                        <a href="mailto:nataliesalemme@gmail.com">
+                          nataliesalemme@gmail.com
+                        </a>
+                      }
+                    />
+                    <List.Item
+                      className="contact-item"
+                      icon="linkify"
+                      content={
+                        <a
+                          href="https://github.com/NatalieSalemme/redux-search"
+                          target="_blank"
+                        >
+                          Github
+                        </a>
+                      }
+                    />
+                  </List>
+                </div>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </div>
 
         <Footer />

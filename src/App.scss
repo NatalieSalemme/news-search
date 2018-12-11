@@ -29,26 +29,19 @@ body {
     text-align: center;
   }
 }
-
-.contact-info {
-  margin-top: 4em;
+.contact-container {
+  margin: 10em 0 10em;
 }
 .contact-item {
-
-  width: 200px;
+  width: 180px;
   margin: auto;
 }
 .contact-image {
   display: relative;
 }
-// .form-container {
-//   width: 40%;
-//   margin: auto;
-// }
 
-.contact-container {
-  margin: 10em 0 10em;
-}
+
+
 .story-thumbnail {
   height: 13em;
 }
@@ -367,6 +360,7 @@ body {
 .menu-container {
   margin-bottom: 7em;
 }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
