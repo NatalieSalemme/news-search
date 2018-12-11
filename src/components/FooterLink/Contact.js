@@ -17,7 +17,7 @@ class Contact extends React.Component {
 
           <h1 style={{ textAlign: 'center' }}>Contact Page</h1>
           <Grid centered stackable>
-            <Grid.Row stackable>
+            <Grid.Row>
               <Grid.Column width={4} className="empty-grid-cell" />
               <Grid.Column width={8}>
                 <FormPage />
