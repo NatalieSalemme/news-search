@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from '../Menu';
 import Footer from '../Footer';
 
-import { Header, Image, Container, Segment } from 'semantic-ui-react';
+import { Header, Image, Segment } from 'semantic-ui-react';
 
 class About extends React.Component {
   componentDidMount() {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import Api from './Api';
 import { Link } from 'react-router-dom';
 import { Card, Image, Grid, Button } from 'semantic-ui-react';
@@ -41,7 +40,6 @@ function trimTitle(title) {
 
 class StoriesList extends React.Component {
   componentDidMount(dispatch) {
-    console.log(this.props.queryText);
     if (this.props.queryText === 'trending') {
       this.props.onInitialLoad();
     } else {
@@ -50,7 +48,6 @@ class StoriesList extends React.Component {
     window.scrollTo(0, 0);
   }
   render() {
-    console.log('query text is', this.props.queryText);
     return (
       <div style={{ marginTop: '8em' }}>
         <h1 style={{ marginBottom: '2em' }}>{this.props.title}</h1>
@@ -103,7 +100,6 @@ StoriesList.defaultProps = {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     storiesList: state.storiesList,
     inputText: state.inputText,

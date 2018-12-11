@@ -83,7 +83,7 @@ const Footer = () => (
           <Grid.Row  >
             <Container>
               <List.Item className="list-item copyright">
-                <a href="http://www.yesmillennial.com" target="_blank"> © Natalie Salemme 2018</a>
+                <a href="http://www.yesmillennial.com" rel="noopener noreferrer"> © Natalie Salemme 2018</a>
               </List.Item>
             </Container>
           </Grid.Row>

@@ -81,7 +81,6 @@ class MainMenu extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     storiesList: state.storiesList,
     inputText: state.inputText,
