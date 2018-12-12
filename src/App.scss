@@ -209,7 +209,6 @@ body {
         color: darken(($primaryColor), 30%);
       }
     }
-
 /*-- Careers --*/
 
 
@@ -323,7 +322,11 @@ body {
   .menu-container {
     padding-bottom: 19em;
     .search-input {
-      height: 2.5em;
+      height: 2em;
+    }
+    a.item.menu-item {
+      display: none;
+      height: .7em;
     }
     .main-header {
       margin-left: 0.01em;
@@ -336,13 +339,12 @@ body {
   .about-container {
     margin-top: 1em;
   }
-  .menu-item {
-    display: none;
-  }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+
   .career-action {
     left: 20em;
     bottom: 10em;
@@ -361,6 +363,7 @@ body {
   .menu-container {
     margin-bottom: 22em;
   }
+
 }
 
 
