@@ -21,35 +21,36 @@ class StoryPage extends Component {
       publishedAt,
       url,
       urlToImage,
-      source
+      source,
     } = this.props.selectedStory;
 
     return (
       <div>
-      <div className="story-page-container">
-        <Menu />
-        <h1 className="title-container">{title}</h1>
-        <img className="story-page-img" src={urlToImage} alt={title} />
-        <div className="published">Published: {matchMe(publishedAt)}  by {determineLink(source.name)}</div>
-        <div className="content-container">
-          {description}
-          {content}
+        <div className="story-page-container">
+          <Menu />
+          <h1 className="title-container">{title}</h1>
+          <img className="story-page-img" src={urlToImage} alt={title} />
+          <div className="published">
+            Published: {matchMe(publishedAt)} by {source.name}
+          </div>
+          <div className="content-container">
+            {description}
+            {content}
+          </div>
+          <Button color="teal" href={url} target="_blank">
+            See Full Story
+          </Button>
+          <Button color="twitter">
+            <Icon name="twitter" /> Twitter
+          </Button>
+          <Button color="linkedin">
+            <Icon name="linkedin" /> LinkedIn
+          </Button>
+          <Button color="instagram">
+            <Icon name="instagram" /> Instagram
+          </Button>
         </div>
-        <Button color="teal" href={url} target="_blank">
-          See Full Story
-        </Button>
-        <Button color="twitter">
-          <Icon name="twitter" /> Twitter
-        </Button>
-        <Button color="linkedin">
-          <Icon name="linkedin" /> LinkedIn
-        </Button>
-        <Button color="instagram">
-          <Icon name="instagram" /> Instagram
-        </Button>
-
-      </div>
-      <Footer />
+        <Footer />
       </div>
     );
   }

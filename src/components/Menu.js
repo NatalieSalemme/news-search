@@ -12,7 +12,6 @@ class MainMenu extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   onHomeClick = () => {
-    console.log('home');
     this.handleItemClick();
   }
   render() {

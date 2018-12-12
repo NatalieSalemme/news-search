@@ -1,9 +1,21 @@
+/*------ VARIABLES ----- */
+$primaryColor: rgb(161, 192, 251);
+/*------ VARIABLES ----- */
 * {
   margin: 0;
   padding: 0;
 }
+
+.App {
+  text-align: center;
+}
+body {
+  background-color: rgb(244, 244, 244);
+}
+
 .about-container {
   text-align: center;
+  margin-top: 9.5em;
   .about-img-container {
     width: 90%;
     margin: auto;
@@ -13,15 +25,8 @@
     }
   }
 }
-
-body {
-  background-color: rgb(244, 244, 244);
-}
-.App {
-  text-align: center;
-}
 .icon {
-  color: rgb(161, 192, 251);
+  color: $primaryColor;
 }
 .coming-soon-container {
   margin: 20em 0;
@@ -31,17 +36,19 @@ body {
 }
 .contact-container {
   margin: 10em 0 10em;
+  .contact-item {
+    width: 180px;
+    margin: auto;
+  }
+  .contact-image {
+    display: relative;
+  }
 }
-.contact-item {
-  width: 180px;
-  margin: auto;
-}
-.contact-image {
-  display: relative;
-}
+/*-- Form Page --*/
 .message {
   text-align: center;
 }
+/*-- Form Page --*/
 
 
 .story-thumbnail {
@@ -53,82 +60,88 @@ body {
   bottom: 2.4em;
 }
 
-
+/*-- Menu --*/
 .main-header {
-  color: rgb(161, 192, 251);
+  color: $primaryColor;
   margin: auto;
   font-family: "Palatino Linotype";
 }
 .newspaper-icon {
   margin-right: .4em;
 }
+/*-- Menu --*/
 
+
+/*-- Stories List --*/
 .card-container {
   margin: auto;
   margin-bottom: 1em;
+  .main-page-button {
+    position: relative;
+    top: 16em;
+  }
 }
-.title-container {
-  padding: 1em 0;
-  width: 40%;
-  margin: auto;
-  font-family: "Palatino Linotype";
-}
+/*-- Stories List --*/
+
+/*-- Story Page --*/
 .story-page-container {
   text-align: center;
-  padding: 10em 0 13em 0;
+  padding: 2em 0 13em 0;
   background-color: white;
   margin-bottom: -6em;
   height: 100%;
+  .title-container {
+    padding: 1em 0;
+    width: 40%;
+    margin: auto;
+    font-family: "Palatino Linotype";
+  }
+  .story-page-img {
+    width: 40%;
+    height: 20%
+  }
+  .published {
+    padding: 1em 0;
+  }
+  .content-container {
+    width: 40%;
+    margin: auto;
+    color: black;
+    margin-bottom: 1em;
+  }
 }
-.content-container {
-  width: 40%;
-  margin: auto;
-  color: black;
-  margin-bottom: 1em;
-}
-.story-page-img {
-  width: 40%;
-  height: 20%
-}
+/*-- Story Page --*/
 
-.published {
-  padding: 1em 0;
-}
-.main-page-button {
-  position: relative;
-  top: 16em;
-}
+
+/*-- Footer --*/
 .footer-container {
   margin-top: 6em;
   padding-bottom: 37.5em;
   height: 14em;
   background-color: #1A1C1D;
   width: 100%;
+  .footer-links-container {
+    margin-top: 4em;
+    text-align: center;
+  }
+  .copyright {
+    padding-top: 6em;
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+  }
+  .list-item {
+    color: white;
+    font-size: 18px;
+    line-height: 1.9;
+  }
 }
-.footer-links-container {
-  margin-top: 4em;
-  text-align: center;
-}
-
-.copyright {
-
-  padding-top: 6em;
-  font-size: 15px;
-  text-align: center;
-  margin: auto;
-}
-.list-item {
-  color: white;
-  font-size: 18px;
-  line-height: 1.9;
-}
-
 .ui.list .list>a.item, .ui.list>a.item {
     cursor: pointer;
     color: white;
 }
 .ui.list .list>a.item, .ui.list>a.item:hover {
-    color: rgb(161, 192, 251);
+    color: $primaryColor;
 }
 
 .ui.grid.divided:not([class*="vertically divided"]) > .row > .column {
@@ -137,15 +150,16 @@ body {
    .ui[class*="vertically divided"].grid > .row:before {
      box-shadow: 0 -1px 0 0 rgba(212, 212, 212, 1.0);
    }
+/*-- Footer --*/
 
-.privacy-policy-container,
-.terms-container {
-  width: 80%;
+
+/*-- Careers --*/
+
+.careers-container {
   margin: auto;
-  margin-top: 4em;
-  ol, ul {
-    margin-left: 1em;
-  }
+  margin-top: 28em;
+  max-width: 70em;
+
 }
 .career-img {
   display: block;
@@ -154,15 +168,13 @@ body {
   width: 60em;
   height: 40em;
 }
-
-
 #pointer {
       width: 250px;
       height: 40px;
       position: relative;
       bottom: 55px;
       left: 889px;
-      background: darken(rgb(161, 192, 251), 10%);
+      background: darken(($primaryColor), 10%);
     }
     #pointer:after {
       content: "";
@@ -175,38 +187,42 @@ body {
       border-top: 20px solid transparent;
       border-bottom: 20px solid transparent;
     }
+    .banner-text {
+      position: relative;
+      left: 25px;
+      top: 7px;
+      color: white;
+    }
+    .career-action {
+      color: darken(($primaryColor), 20%);
+      position: relative;
+      .apply-button,
+      .apply-button:focus {
+        background-color: darken(($primaryColor), 30%);
+        color: white;
+        font-weight: bold;
+        margin: 20px 0 0 75px;
+      }
+      .apply-button:hover,
+      .apply-button:active {
+        background-color: $primaryColor;
+        color: darken(($primaryColor), 30%);
+      }
+    }
 
-.banner-text {
-  position: relative;
-  left: 25px;
-  top: 7px;
-  color: white;
-}
-.career-action {
-  color: darken(rgb(161, 192, 251), 20%);
-  position: relative;
-  .apply-button,
-  .apply-button:focus {
-    background-color: darken(rgb(161, 192, 251), 30%);
-    color: white;
-    font-weight: bold;
-    margin: 20px 0 0 75px;
-  }
-  .apply-button:hover,
-  .apply-button:active {
-    background-color: rgb(161, 192, 251);
-    color: darken(rgb(161, 192, 251), 30%);
-  }
-}
-.about-container {
-  margin-top: 9.5em;
-}
-.careers-container {
+/*-- Careers --*/
+
+
+.privacy-policy-container,
+.terms-container {
+  width: 80%;
   margin: auto;
-  margin-top: 28em;
-  max-width: 70em;
-
+  margin-top: 4em;
+  ol, ul {
+    margin-left: 1em;
+  }
 }
+
 /*------ NEWS ICONS ----- */
 .al-icon {
   margin: 0 0 0 .5em;
@@ -269,8 +285,6 @@ body {
   margin: 0 0 -2em .5em;
 }
 .wsj-icon {
-  // height: 190px;
-  // width: 190px;
   margin: 0 0 -6.2em 1em;
 }
 .vice-icon {
@@ -361,6 +375,9 @@ body {
 }
 .menu-container {
   margin-bottom: 7em;
+}
+.main-header {
+  margin: auto;
 }
 }
 

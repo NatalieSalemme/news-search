@@ -8,7 +8,7 @@ const determineLink = url => {
           <img
             className="al-icon"
             alt={url}
-            src="http://www.simpleimageresizer.com/_uploads/photos/df45efa6/O794HevY_400x400_40x40.jpg"
+            src="https://media.al.com/static/bama/static/img/logos/logo_fb.jpg"
           />
         </a>
       );
@@ -40,19 +40,21 @@ const determineLink = url => {
         </a>
       );
 
-
-      case 'Business Insider':
-        return (
-          <a href="https://www.businessinsider.com/" target="_blank" rel="noopener noreferrer">
-            <img
-              alt={url}
-              className="business-insider-icon"
-              rel="noopener noreferrer"
-              src="http://www.simpleimageresizer.com/_uploads/photos/df45efa6/download-10_120x40.png"
-            />
-          </a>
-        );
-
+    case 'Business Insider':
+      return (
+        <a
+          href="https://www.businessinsider.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            alt={url}
+            className="business-insider-icon"
+            rel="noopener noreferrer"
+            src="http://www.simpleimageresizer.com/_uploads/photos/df45efa6/download-10_120x40.png"
+          />
+        </a>
+      );
 
     case 'CBS News':
     case 'Cbssports.com':
@@ -101,22 +103,20 @@ const determineLink = url => {
         </a>
       );
 
-
-      case 'Espn.com':
-        return (
-          <a
-            href="http://www.espn.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="espn-icon"
-              alt={url}
-              src="http://www.simpleimageresizer.com/_uploads/photos/df45efa6/download-9_120x45.png"
-            />
-          </a>
-        );
-
+    case 'Espn.com':
+      return (
+        <a
+          href="http://www.espn.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="espn-icon"
+            alt={url}
+            src="http://www.simpleimageresizer.com/_uploads/photos/df45efa6/download-9_120x45.png"
+          />
+        </a>
+      );
 
     case 'Fantasypros.com':
       return (
@@ -230,22 +230,20 @@ const determineLink = url => {
         </a>
       );
 
-
-      case 'Nintendolife.com':
-        return (
-          <a
-            href="http://www.nintendolife.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="nintendo-life-icon"
-              alt={url}
-              src="http://www.simpleimageresizer.com/_uploads/photos/df45efa6/download-8_120x40.png"
-            />
-          </a>
-        );
-
+    case 'Nintendolife.com':
+      return (
+        <a
+          href="http://www.nintendolife.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="nintendo-life-icon"
+            alt={url}
+            src="http://www.simpleimageresizer.com/_uploads/photos/df45efa6/download-8_120x40.png"
+          />
+        </a>
+      );
 
     case 'Npr.org':
       return (

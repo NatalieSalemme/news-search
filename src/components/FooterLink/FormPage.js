@@ -93,7 +93,7 @@ handleSelectChecked = () => {
       <div>
         {this.state.success && <Message className="message"  color='green' >Success! Your information has been submitted</Message>}
         {this.state.error && <Message className="message"  color='red' >Error! There was a problem submitting your information. Please make sure each field is filled out</Message>}
-      <Form className="form-container">
+      <Form>
         <Form.Group widths="equal">
           <Form.Field
 
