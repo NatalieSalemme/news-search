@@ -26,13 +26,14 @@ class FormPage extends Component {
     textArea: '',
     checked: false,
     submitted: false,
-    radioChecked: false
+    radioChecked: false,
+    selectChecked: false
   };
 
 
   handleSubmit = (e) => {
-    const {first, last, textArea, checked, value } = this.state;
-    if(first && last && textArea && checked && value) {
+    const {first, last, textArea, checked, value, selectChecked } = this.state;
+    if(first && last && textArea && checked && value && selectChecked) {
         this.setState({
           submitted: true,
           success: true,
@@ -80,22 +81,22 @@ class FormPage extends Component {
   }
 
 handleSelectChecked = () => {
-  console.log('checked');
   this.setState({
     selectChecked: true
   });
 }
+
 
   render() {
     const { value } = this.state;
     return (
       <div>
         {this.state.success && <Message className="message"  color='green' >Success! Your information has been submitted</Message>}
-        {this.state.error && <Message className="message"  color='red' >Error! There was a problem submitting your information. Please try again</Message>}
+        {this.state.error && <Message className="message"  color='red' >Error! There was a problem submitting your information. Please make sure each field is filled out</Message>}
       <Form className="form-container">
         <Form.Group widths="equal">
           <Form.Field
-          
+
             name="first"
             width={2}
             value={this.state.first}
@@ -115,6 +116,7 @@ handleSelectChecked = () => {
           />
           <Form.Field
           width={2}
+          onClick={this.handleSelectChecked}
             control={Select}
             label="Status"
             options={options}
