@@ -55,7 +55,7 @@ class StoriesList extends React.Component {
   }
   render() {
     return (
-      <div style={{ marginTop: '8em' }}>
+      <div className="stories-list-container">
         <h1 style={{ marginBottom: '2em' }}>{this.props.title}</h1>
         <Grid className="card-grid-container">
           {this.props.storiesList.map((story, index) => {

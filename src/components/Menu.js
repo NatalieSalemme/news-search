@@ -27,7 +27,7 @@ class MainMenu extends Component {
             to="/"
             name="home"
             active={activeItem === 'home'}
-            onClick={this.handleItemClick}
+            onClick={this.onHomeClick}
           />
 
           <Menu.Item
