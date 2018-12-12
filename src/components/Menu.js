@@ -11,6 +11,10 @@ class MainMenu extends Component {
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
+  onHomeClick = () => {
+    console.log('home');
+    this.handleItemClick();
+  }
   render() {
     const newspaperIcon = <FontAwesomeIcon icon={faNewspaper} />;
     const { activeItem } = this.state;
@@ -23,7 +27,7 @@ class MainMenu extends Component {
             to="/"
             name="home"
             active={activeItem === 'home'}
-            onClick={this.handleItemClick}
+            onClick={this.onHomeClick}
           />
 
           <Menu.Item

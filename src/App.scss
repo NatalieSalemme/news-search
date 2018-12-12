@@ -320,14 +320,14 @@ body {
   .contact-container {
     margin-top: -.1em;
   }
+  .about-container {
+    margin-top: 1em;
+  }
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  body {
-    background-color: green;
-  }
   .career-action {
     left: 20em;
     bottom: 10em;
@@ -351,9 +351,6 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-body {
-  background-color: purple;
-}
 .career-action {
   left: 34em;
   bottom: 12em;
@@ -365,24 +362,15 @@ body {
 .menu-container {
   margin-bottom: 7em;
 }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  body {
-    background-color: red;
-  }
   .career-action {
     left: 39em;
     bottom: 14em;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    background-color: orange;
-  }
-}
+
 /*------ MEDIA QUERIES ----- */

@@ -4,7 +4,7 @@ const initialState = {
   storiesList: [],
   inputText: '',
   selectedStory: null,
-  title: 'Top Trending News'
+  title: 'TOP TRENDING'
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,7 +16,7 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         storiesList: action.storiesList,
         inputText: '',
-        title: `${action.title || state.title} NEWS`,
+        title: `${action.title || state.title}`,
       });
     case 'ON_STORY_SELECT':
       return Object.assign({}, state, { selectedStory: action.selectedStory });
