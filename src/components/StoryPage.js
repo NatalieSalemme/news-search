@@ -38,18 +38,20 @@ class StoryPage extends Component {
             {description}
             {content}
           </div>
-          <Button color="teal" href={url} target="_blank">
-            See Full Story
-          </Button>
-          <Button color="twitter">
-            <Icon name="twitter" /> Twitter
-          </Button>
-          <Button color="linkedin">
-            <Icon name="linkedin" /> LinkedIn
-          </Button>
-          <Button color="instagram">
-            <Icon name="instagram" /> Instagram
-          </Button>
+          <div className="link-buttons">
+            <Button color="teal" href={url} target="_blank">
+              See Full Story
+            </Button>
+            <Button color="twitter">
+              <Icon name="twitter" /> Twitter
+            </Button>
+            <Button color="linkedin">
+              <Icon name="linkedin" /> LinkedIn
+            </Button>
+            <Button color="instagram">
+              <Icon name="instagram" /> Instagram
+            </Button>
+          </div>
         </div>
         <Footer />
       </div>
