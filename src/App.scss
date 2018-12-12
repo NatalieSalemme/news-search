@@ -224,91 +224,90 @@ body {
 }
 
 /*------ NEWS ICONS ----- */
-.al-icon {
-  margin: 0 0 0 .5em;
-}
-.al-jazeera-icon {
-  margin: 0 0 0 1em;
-}
-.bbc-icon {
-  margin: 0 0 -.5em 1em;
-}
-.business-insider-icon {
-  margin: 0 0 -.3em .5em;
-}
-.cbs-icon {
-  height: 25px;
-  width: 120px;
-  margin: 0 0 -.4em .4em;
-}
-.cnn-icon {
-  margin: 0 0 -.2em .7em;
-}
-.dexerto-icon {
-  margin: 0 0 0 .5em;
-}
-.espn-icon {
-  margin: 0 0 -1em 1em;
-}
-.fox-business-icon  {
-  margin-left: .8em;
-}
-.fox-news-icon {
-  margin: 0 0 -.2em .5em;;
-}
-.the-hill-icon {
-  margin: 0 0 -1.8em 1em;
-}
-.nbc-icon {
-  margin: 0 0 0 .5em;
-}
-.nesn-icon {
-  margin: 0 0 -2em .5em;
-}
-.nintendo-life-icon {
+  {/* Removing the individually styled logos due to it being impossible to upload the logo of every news website*/}
 
- margin: 0 0 -.2em 1em;
-}
-.npr-icon {
-  margin: 0 0 -.5em .5em;
-}
-.reuters-icon {
-  margin: 0 0 -2em .5em;
-}
-.tech-radar-icon {
-  margin: 0 0 -1.8em 1em;
-}
-.usa-today-icon {
-  margin: 0 0 -.8em 1em;
-}
-.the-wrap-icon {
-  margin: 0 0 -2em .5em;
-}
-.wsj-icon {
-  margin: 0 0 -6.2em 1em;
-}
-.vice-icon {
-  margin-bottom: -1.8em;
-}
-.youtube-icon {
-  margin: 0 0 -3em .4em;
-}
-
-.fantasy-pros-icon {
-  margin: 0 0 -1.8em -.5em;
-}
-.news-9-icon {
-  margin: 0 0 -.5em .5em;
-}
+// .al-icon {
+//   margin: 0 0 0 .5em;
+// }
+// .al-jazeera-icon {
+//   margin: 0 0 0 1em;
+// }
+// .bbc-icon {
+//   margin: 0 0 -.5em 1em;
+// }
+// .business-insider-icon {
+//   margin: 0 0 -.3em .5em;
+// }
+// .cbs-icon {
+//   height: 25px;
+//   width: 120px;
+//   margin: 0 0 -.4em .4em;
+// }
+// .cnn-icon {
+//   margin: 0 0 -.2em .7em;
+// }
+// .dexerto-icon {
+//   margin: 0 0 0 .5em;
+// }
+// .espn-icon {
+//   margin: 0 0 -1em 1em;
+// }
+// .fox-business-icon  {
+//   margin-left: .8em;
+// }
+// .fox-news-icon {
+//   margin: 0 0 -.2em .5em;;
+// }
+// .the-hill-icon {
+//   margin: 0 0 -1.8em 1em;
+// }
+// .nbc-icon {
+//   margin: 0 0 0 .5em;
+// }
+// .nesn-icon {
+//   margin: 0 0 -2em .5em;
+// }
+// .nintendo-life-icon {
+//
+//  margin: 0 0 -.2em 1em;
+// }
+// .npr-icon {
+//   margin: 0 0 -.5em .5em;
+// }
+// .reuters-icon {
+//   margin: 0 0 -2em .5em;
+// }
+// .tech-radar-icon {
+//   margin: 0 0 -1.8em 1em;
+// }
+// .usa-today-icon {
+//   margin: 0 0 -.8em 1em;
+// }
+// .the-wrap-icon {
+//   margin: 0 0 -2em .5em;
+// }
+// .wsj-icon {
+//   margin: 0 0 -6.2em 1em;
+// }
+// .vice-icon {
+//   margin-bottom: -1.8em;
+// }
+// .youtube-icon {
+//   margin: 0 0 -3em .4em;
+// }
+//
+// .fantasy-pros-icon {
+//   margin: 0 0 -1.8em -.5em;
+// }
+// .news-9-icon {
+//   margin: 0 0 -.5em .5em;
+// }
 /*------ NEWS ICONS ----- */
 
 
 /*------ MEDIA QUERIES ----- */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: blue;
-  }
   .career-action {
     left: 13em;
     bottom: 7em;

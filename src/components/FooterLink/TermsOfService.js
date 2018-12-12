@@ -4,6 +4,7 @@ import Footer from '../Footer';
 import { Header } from 'semantic-ui-react';
 
 class TermsOfService extends React.Component {
+    {/* This ensures that the screen view is at the top when React Router renders a new route */}
   componentDidMount() {
     window.scrollTo(0,0);
   }

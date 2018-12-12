@@ -3,7 +3,7 @@ import Menu from '../Menu';
 import Footer from '../Footer';
 import FormPage from './FormPage';
 
-import { List, Image, Grid} from 'semantic-ui-react';
+import { List, Image, Grid } from 'semantic-ui-react';
 
 class Contact extends React.Component {
   componentDidMount() {
@@ -18,12 +18,13 @@ class Contact extends React.Component {
           <h1 style={{ textAlign: 'center' }}>Contact Page</h1>
           <Grid centered stackable>
             <Grid.Row>
+              {/* Creating empty grid cells to make sure that the columns do not overlap on smaller screens */}
               <Grid.Column width={4} className="empty-grid-cell" />
               <Grid.Column width={8}>
                 <FormPage />
               </Grid.Column>
               <Grid.Column width={1} className="empty-grid-cell" />
-              <Grid.Column width={3} >
+              <Grid.Column width={3}>
                 <div className="contact-info">
                   <Image
                     centered

@@ -9,11 +9,12 @@ import Api from './Api';
 class MainMenu extends Component {
   state = { activeItem: 'home' };
 
+  {/* Creates the gray highlight on the selected route */}
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   onHomeClick = () => {
     this.handleItemClick();
-  }
+  };
   render() {
     const newspaperIcon = <FontAwesomeIcon icon={faNewspaper} />;
     const { activeItem } = this.state;
@@ -26,7 +27,7 @@ class MainMenu extends Component {
             to="/"
             name="home"
             active={activeItem === 'home'}
-            onClick={this.onHomeClick}
+            onClick={this.handleItemClick}
           />
 
           <Menu.Item
@@ -45,15 +46,19 @@ class MainMenu extends Component {
             onClick={this.handleItemClick}
           />
 
-          <Menu.Header as="h1" color="blue" fixed="left" className="main-header">
+          <Menu.Header
+            as="h1"
+            color="blue"
+            fixed="left"
+            className="main-header"
+          >
             <span className="newspaper-icon">{newspaperIcon}</span>
             News Search
           </Menu.Header>
 
-          <Menu.Menu >
+          <Menu.Menu>
             <Menu.Item>
               <form
-
                 onSubmit={e =>
                   this.props.onInputSubmit(e, this.props.inputText)
                 }
