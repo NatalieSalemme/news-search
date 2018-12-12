@@ -50,6 +50,7 @@ class MainMenu extends Component {
           <Menu.Menu >
             <Menu.Item>
               <form
+
                 onSubmit={e =>
                   this.props.onInputSubmit(e, this.props.inputText)
                 }

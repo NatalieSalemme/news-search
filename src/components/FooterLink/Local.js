@@ -4,7 +4,7 @@ import StoriesList from '../StoriesList';
 const Local = () => (
   <div style={{ textAlign: 'center' }}>
     <Menu />
-    <StoriesList title="Local News" queryText="SanDiego" />
+    <StoriesList title="Local News" queryText="San Diego" />
   </div>
 );
 

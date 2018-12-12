@@ -1,4 +1,5 @@
 import axios from 'axios';
+import history from '../history';
 
 const testing = dispatch => {
   axios
@@ -23,8 +24,11 @@ function getStories(dispatch, query) {
       dispatch({
         type: 'ON_INPUT_SUBMIT',
         storiesList: response.data.articles,
+        title: query.toUpperCase()
       });
+
     });
+      history.push('/');
 }
 
 const storyLoad = (dispatch, query) => {
@@ -36,6 +40,7 @@ const storyLoad = (dispatch, query) => {
       dispatch({
         type: 'ON_INITIAL_LOAD',
         storiesList: response.data.articles,
+        title: query.toUpperCase()
       });
     });
 };

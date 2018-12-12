@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.scss';
 import { Provider } from 'react-redux';
+import history from './history';
 import Router from './components/Router';
 import App from './App';
 
@@ -10,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-      <Router>
+      <Router history={history}>
         <App />
         </Router>
   </Provider>,

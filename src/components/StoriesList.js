@@ -96,7 +96,7 @@ class StoriesList extends React.Component {
 }
 
 StoriesList.defaultProps = {
-  title: 'Top Trending News',
+  title: 'Top Trending News'
 };
 
 const mapStateToProps = state => {
@@ -104,6 +104,7 @@ const mapStateToProps = state => {
     storiesList: state.storiesList,
     inputText: state.inputText,
     selectedStory: state.selectedStory,
+    title: state.title
   };
 };
 
