@@ -28,7 +28,9 @@ class FormPage extends Component {
     submitted: false,
     radioChecked: false
   };
-  handleSubmit = () => {
+
+
+  handleSubmit = (e) => {
     const {first, last, textArea, checked, value } = this.state;
     if(first && last && textArea && checked && value) {
         this.setState({
@@ -46,9 +48,17 @@ class FormPage extends Component {
       }
     }
 
-  handleChange = (e, { value }) => this.setState({
-    value,
-    error: false});
+
+    handleChange = (e, { value }) => {
+        this.setState({
+         value
+       });
+    }
+
+
+
+
+
 
   handleInputChange = (event) => {
     const target = event.target;
@@ -60,7 +70,6 @@ class FormPage extends Component {
       success: false,
       error: false
     });
-
   }
   handleChecked = () => {
     this.setState({
@@ -76,6 +85,7 @@ handleSelectChecked = () => {
     selectChecked: true
   });
 }
+
   render() {
     const { value } = this.state;
     return (
@@ -85,7 +95,7 @@ handleSelectChecked = () => {
       <Form className="form-container">
         <Form.Group widths="equal">
           <Form.Field
-
+          
             name="first"
             width={2}
             value={this.state.first}
