@@ -1,8 +1,6 @@
 import React from 'react';
 
-{
-  /* Due to it being impossible to be able to get the address for each news website, I decided not to include the logos so the application will look more uniform */
-}
+/* Due to it being impossible to be able to get the address for each news website, I decided not to include the logos so the application will look more uniform */
 
 const determineLink = url => {
   switch (url) {

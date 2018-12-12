@@ -30,9 +30,8 @@ function getStories(dispatch, query) {
   history.push('/');
 }
 
-{
-  /* On initial story load when a user submits a query and is on the storiesList page */
-}
+/* On initial story load when a user submits a query and is on the storiesList page */
+
 const storyLoad = (dispatch, query) => {
   axios
     .get(

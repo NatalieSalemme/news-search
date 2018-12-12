@@ -5,9 +5,8 @@ import { Link } from 'react-router-dom';
 import { Card, Image, Grid, Button } from 'semantic-ui-react';
 import Footer from './Footer';
 
-{
-  /* Converts date input from API to understandable date format */
-}
+/* Converts date input from API to understandable date format */
+
 function matchMe(str) {
   let regEx = /\d{4}-\d{2}-\d{2}/;
   let match = str.match(regEx)[0].split('-');
@@ -15,9 +14,8 @@ function matchMe(str) {
   return results;
 }
 
-{
-  /* Trims description to fit card */
-}
+/* Trims description to fit card */
+
 function trimDescription(desc) {
   if (desc) {
     if (desc.length > 150) {
@@ -32,9 +30,8 @@ function trimDescription(desc) {
   return desc;
 }
 
-{
-  /* Trims title to fit card */
-}
+/* Trims title to fit card */
+
 function trimTitle(title) {
   if (title.length > 40) {
     return (

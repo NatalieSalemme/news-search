@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import { Button, Icon } from 'semantic-ui-react';
 import Menu from './Menu';
 import Footer from './Footer';
-import determineLink from './IconFunction';
 
-{
-  /* Converts date format from API to readable date format */
-}
+/* Converts date format from API to readable date format */
+
 function matchMe(str) {
   let regEx = /\d{4}-\d{2}-\d{2}/;
   let match = str.match(regEx)[0].split('-');

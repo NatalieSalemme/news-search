@@ -224,7 +224,7 @@ body {
 }
 
 /*------ NEWS ICONS ----- */
-  {/* Removing the individually styled logos due to it being impossible to upload the logo of every news website*/}
+  /* Removing the individually styled logos due to it being impossible to upload the logo of every news website*/
 
 // .al-icon {
 //   margin: 0 0 0 .5em;
@@ -336,7 +336,9 @@ body {
   .about-container {
     margin-top: 1em;
   }
-
+  .menu-item {
+    display: none;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

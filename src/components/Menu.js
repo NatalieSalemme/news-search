@@ -9,7 +9,7 @@ import Api from './Api';
 class MainMenu extends Component {
   state = { activeItem: 'home' };
 
-  {/* Creates the gray highlight on the selected route */}
+  /* Creates the gray highlight on the selected route */
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   onHomeClick = () => {
@@ -22,7 +22,7 @@ class MainMenu extends Component {
       <div className="menu-container">
         <Menu fixed="top" inverted stackable size="massive">
           <Menu.Item
-            className="first-menu-item"
+            className="menu-item"
             as={Link}
             to="/"
             name="home"
@@ -31,6 +31,7 @@ class MainMenu extends Component {
           />
 
           <Menu.Item
+            className="menu-item"
             as={Link}
             to="/about"
             name="about"
@@ -39,6 +40,7 @@ class MainMenu extends Component {
           />
 
           <Menu.Item
+            className="menu-item"
             as={Link}
             to="/contact"
             name="contact"
