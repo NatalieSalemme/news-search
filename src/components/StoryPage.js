@@ -57,12 +57,16 @@ class StoryPage extends Component {
                 Twitter
               </Button>
             </a>
-            <Button color="linkedin">
-              <Icon name="linkedin" /> LinkedIn
-            </Button>
-            <Button color="instagram">
-              <Icon name="instagram" /> Instagram
-            </Button>
+            <a href="https://www.linkedin.com/">
+              <Button color="linkedin">
+                <Icon name="linkedin" /> LinkedIn
+              </Button>
+            </a>
+            <a href="https://www.instagram.com">
+              <Button color="instagram">
+                <Icon name="instagram" /> Instagram
+              </Button>
+            </a>
           </div>
         </div>
         <Footer />
