@@ -45,9 +45,18 @@ class StoryPage extends Component {
             <Button color="teal" href={url} target="_blank">
               See Full Story
             </Button>
-            <Button color="twitter">
-              <Icon name="twitter" /> Twitter
-            </Button>
+            <a
+              className="twitter-share-button"
+              href={`https://twitter.com/intent/tweet?text=${title.slice(
+                0,
+                90
+              )} ${url}`}
+            >
+              <Button color="twitter">
+                <Icon name="twitter" />
+                Twitter
+              </Button>
+            </a>
             <Button color="linkedin">
               <Icon name="linkedin" /> LinkedIn
             </Button>
