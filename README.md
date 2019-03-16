@@ -16,6 +16,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - If the user is on the story list page, they are able to type in their own query and see news articles depending on their subject, with the title reflecting their query
 
 # How to Start
- git clone https://github.com/NatalieSalemme/redux-search.git
- npm install
- npm run start 
+ - git clone https://github.com/NatalieSalemme/redux-search.git
+ - npm install
+ - npm run start 
